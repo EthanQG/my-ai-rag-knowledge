@@ -45,7 +45,7 @@ public class RAGTest {
         TikaDocumentReader reader = new TikaDocumentReader("./data/file.text");
 
         List<Document> documents = reader.get();
-        //切割文件 documents 切成了很多个小段落 Chunk）
+        //切割文件 documents 切成了很多个小段落 Chunk
         List<Document> documentSplitterList = tokenTextSplitter.apply(documents);
 
         documents.forEach(doc -> doc.getMetadata().put("knowledge", "知识库名称"));
