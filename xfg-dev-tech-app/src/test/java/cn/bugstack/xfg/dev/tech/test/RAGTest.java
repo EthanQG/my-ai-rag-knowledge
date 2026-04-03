@@ -42,7 +42,7 @@ public class RAGTest {
 
     @Test
     public void upload() {
-        TikaDocumentReader reader = new TikaDocumentReader("./data/file.text");
+        TikaDocumentReader reader = new TikaDocumentReader("data/file.txt");
 
         List<Document> documents = reader.get();
         //切割文件 documents 切成了很多个小段落 Chunk
